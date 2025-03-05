@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Updating An Item</title>
+</head>
+<body>
+<div align="center">
+        <h2>Update Ice Cream</h2>
+        <form id="update-form">
+            {% csrf_token %}
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="ice_cream_name"><br><br>
+
+            <label for="flavour">Flavour: </label>
+            <input type="text" id="flavour" name="ice_cream_flavour"><br><br>
+
+            <label for="weight">Weight (in grams): </label>
+            <input type="text" id="weight" name="ice_cream_weight"><br><br>
+
+            <button type="button" id="save-button">Save</button> &nbsp;
+            <button type="button" id="cancel-button">Cancel</button>
+        </form>
+    </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{% static 'update-item.js' %}"></script>
+</body>
+</html>

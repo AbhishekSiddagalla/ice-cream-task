@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Adding New Item To The Menu</title>
+</head>
+<body>
+<div class="container"  align="center">
+    <h2>Add New Ice Cream Item</h2>
+
+    <form id="add-item-form" method="post">
+    {% csrf_token %}
+    <label for="ice_cream_name">Name:</label>
+    <input type="text" id="ice_cream_name" name="ice_cream_name" required><br><br>
+
+    <label for="ice_cream_flavour">Flavour:</label>
+    <input type="text" id="ice_cream_flavour" name="ice_cream_flavour" required><br><br>
+
+    <label for="ice_cream_weight">Weight (grams):</label>
+    <input type="text" id="ice_cream_weight" name="ice_cream_weight" required><br><br>
+
+    <button type="button" id="add-ice-cream-btn">Add Item</button>
+    </form>
+    <br>
+    <a href="{% url 'icecream_item_list' %}">
+           <button>View Menu</button>
+       </a>
+    &nbsp;
+    <a href="{% url 'index_page' %}">
+           <button>Index</button>
+       </a>
+</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'ad-item.js' %}"></script>
+</body>
+</html>

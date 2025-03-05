@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+    <div class="container" align="center">
+        <h2>Ice Cream Item Index</h2>
+            <strong>Create New Item</strong>
+        &nbsp;
+               <a href="{% url 'new_item_data' %}">
+                   <button>Add New Item</button>
+               </a>
+        <br><br>
+        &nbsp;
+            <strong>List All Items</strong>
+        &nbsp;
+            <a href="{% url 'icecream_item_list' %}">
+                <button>View All Items</button>
+            </a>
+        <br><br>
+        &nbsp;
+            <strong>Update  An Item</strong>
+        &nbsp;
+            <a href="{% url 'icecream_item_list' %}">
+            <button>Edit Item</button>
+            </a>
+        <br><br>
+        &nbsp;
+            <strong>Delete An Item</strong>
+        &nbsp;
+            <button>Remove Item</button>
+    </div>
+</body>
+</html>
